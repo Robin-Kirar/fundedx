@@ -1,0 +1,113 @@
+.table-shadow {
+  box-shadow: 0px 11px 32px rgb(193, 173, 213, 0.28) !important;
+}
+.plan-table-btn-shadow {
+  box-shadow: 0px 10px 25px rgb(99, 91, 255, 0.4);
+}
+
+/* Table styles */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header styles */
+.table-dark thead {
+  background: linear-gradient(
+    90deg,
+    #5c63ec,
+    #8d43f8
+  ); /* Gradient for the entire header */
+}
+
+.table-dark thead th {
+  color: white;
+  height: 75px;
+  line-height: 75px;
+  font-size: 18px;
+  text-align: center;
+  border: none; /* Remove borders for a clean look */
+}
+/* Table body row styles */
+.table-dark tbody tr {
+  background-color: #202020;
+}
+
+/* Table body cell styles */
+.table-dark tbody td {
+  height: 73px;
+  line-height: 73px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.tick-icon {
+  display: inline-block;
+  background-color: #202020;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 30px; /* Adjusted width */
+  height: 30px; /* Adjusted height */
+  line-height: 25px; /* Centered tick */
+  text-align: center;
+  border: 3px solid white; /* Uniform border */
+}
+
+/* ----------------- PLANS TABLES ------------- */
+.plans-table {
+  --cell-col: #0a0a0a;
+  --thead-col: #202020;
+  --highlight-col: #000000;
+
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--cell-col);
+  text-align: center;
+
+  & > thead {
+    background: var(--thead-col);
+
+    & th {
+      font-size: 24px;
+    }
+  }
+
+  & th,
+  & td {
+    /* border: 1px solid var(--thead-col); */
+    padding: 2rem 1rem;
+  }
+
+  & tr td {
+    font-size: 14px;
+    background: linear-gradient(
+      to bottom,
+      var(--cell-col) 80%,
+      rgba(0, 0, 0, 0.01) 100%
+    );
+    border-right: 1px solid #20202044;
+
+    &:last-of-type {
+      border: none;
+    }
+
+    &.highlight {
+      background: linear-gradient(
+        to bottom,
+        var(--highlight-col) 80%,
+        rgba(0, 0, 0, 0.01) 100%
+      );
+    }
+  }
+
+  & .plans-strip-cols > td:nth-of-type(odd) {
+    background: linear-gradient(
+      to bottom,
+      var(--highlight-col) 80%,
+      rgba(0, 0, 0, 0.01) 100%
+    );
+  }
+}
